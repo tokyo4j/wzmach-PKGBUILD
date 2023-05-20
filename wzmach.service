@@ -1,0 +1,11 @@
+[Unit]
+Description=Daemon for touchpad gestures
+Requires=local-fs.target
+After=local-fs.target
+
+[Service]
+Type=simple
+ExecStart=wzmach --config /etc/wzmach/config.ron
+
+[Install]
+WantedBy=sysinit.target
